@@ -1,5 +1,5 @@
 // Deno dependencies for trophy functionality
-export { soxa } from "https://deno.land/x/soxa@v1.8/mod.ts";
+// Note: soxa package doesn't exist at the specified URL, using native fetch wrapper
 export {
   Bulk,
   connect,
@@ -18,3 +18,32 @@ export {
   spy,
   stub,
 } from "https://deno.land/std@0.224.0/testing/mock.ts";
+
+// Soxa HTTP client wrapper (using native fetch)
+export const soxa = {
+  post: async (url: string, options: any = {}) => {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: options.headers || {},
+      body: JSON.stringify(options.body || {}),
+    });
+    const data = await response.json();
+    return {
+      data,
+      status: response.status,
+      headers: response.headers,
+    };
+  },
+  get: async (url: string, options: any = {}) => {
+    const response = await fetch(url, {
+      method: "GET",
+      headers: options.headers || {},
+    });
+    const data = await response.json();
+    return {
+      data,
+      status: response.status,
+      headers: response.headers,
+    };
+  },
+};
