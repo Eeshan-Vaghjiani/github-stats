@@ -1,6 +1,4 @@
 {
-  "buildCommand": null,
-  "installCommand": "npm install",
   "functions": {
     "api/*.js": {
       "memory": 128,
@@ -17,5 +15,8 @@
       "source": "/",
       "destination": "https://github.com/eeshan-vaghjiani/github-readme-stats"
     }
-  ]
+  ],
+  "github": {
+    "silent": true
+  }
 }
