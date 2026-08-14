@@ -1,0 +1,1341 @@
+{
+  "data": {
+    "data": {
+      "user": {
+        "repositories": {
+          "totalCount": 128,
+          "nodes": [
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 23
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 11
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  }
+                ]
+              },
+              "stargazerCount": 9
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 6
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 6
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "Java"
+                  }
+                ]
+              },
+              "stargazerCount": 5
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  }
+                ]
+              },
+              "stargazerCount": 5
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "Jupyter Notebook"
+                  }
+                ]
+              },
+              "stargazerCount": 5
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  }
+                ]
+              },
+              "stargazerCount": 4
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 3
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  }
+                ]
+              },
+              "stargazerCount": 2
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 2
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 2
+            },
+            {
+              "languages": {
+                "nodes": []
+              },
+              "stargazerCount": 1
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 1
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "PHP"
+                  },
+                  {
+                    "name": "Go"
+                  },
+                  {
+                    "name": "HTML"
+                  }
+                ]
+              },
+              "stargazerCount": 1
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "CSS"
+                  }
+                ]
+              },
+              "stargazerCount": 1
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  }
+                ]
+              },
+              "stargazerCount": 1
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "Dockerfile"
+                  }
+                ]
+              },
+              "stargazerCount": 1
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "Dockerfile"
+                  }
+                ]
+              },
+              "stargazerCount": 1
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "Dart"
+                  },
+                  {
+                    "name": "Swift"
+                  },
+                  {
+                    "name": "Kotlin"
+                  }
+                ]
+              },
+              "stargazerCount": 1
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "HTML"
+                  },
+                  {
+                    "name": "CSS"
+                  }
+                ]
+              },
+              "stargazerCount": 1
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "Vue"
+                  },
+                  {
+                    "name": "HTML"
+                  }
+                ]
+              },
+              "stargazerCount": 1
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "Jupyter Notebook"
+                  },
+                  {
+                    "name": "Python"
+                  }
+                ]
+              },
+              "stargazerCount": 1
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "Dart"
+                  },
+                  {
+                    "name": "HTML"
+                  },
+                  {
+                    "name": "Swift"
+                  }
+                ]
+              },
+              "stargazerCount": 1
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "Vue"
+                  },
+                  {
+                    "name": "HTML"
+                  }
+                ]
+              },
+              "stargazerCount": 1
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "PHP"
+                  }
+                ]
+              },
+              "stargazerCount": 1
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "CSS"
+                  },
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "HTML"
+                  },
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "CSS"
+                  },
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": []
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": []
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "Shell"
+                  },
+                  {
+                    "name": "Dockerfile"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "CSS"
+                  },
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "Dockerfile"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": []
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "TypeScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "CSS"
+                  },
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "HTML"
+                  },
+                  {
+                    "name": "C#"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "HTML"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "CSS"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "PHP"
+                  },
+                  {
+                    "name": "Vue"
+                  },
+                  {
+                    "name": "Blade"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "CSS"
+                  },
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "C"
+                  },
+                  {
+                    "name": "C++"
+                  },
+                  {
+                    "name": "HTML"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "C++"
+                  },
+                  {
+                    "name": "Makefile"
+                  },
+                  {
+                    "name": "CMake"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "C++"
+                  },
+                  {
+                    "name": "Makefile"
+                  },
+                  {
+                    "name": "CMake"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "TypeScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "CSS"
+                  },
+                  {
+                    "name": "HTML"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "CSS"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "Vue"
+                  },
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "CSS"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "CSS"
+                  },
+                  {
+                    "name": "HTML"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": []
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "HTML"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "PHP"
+                  },
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "Blade"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "Rust"
+                  },
+                  {
+                    "name": "HTML"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "Svelte"
+                  },
+                  {
+                    "name": "HTML"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "CSS"
+                  },
+                  {
+                    "name": "HTML"
+                  },
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "Dockerfile"
+                  },
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "Rust"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "Dockerfile"
+                  },
+                  {
+                    "name": "Shell"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "Shell"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "HTML"
+                  },
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "CSS"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "CSS"
+                  },
+                  {
+                    "name": "HTML"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "Dart"
+                  },
+                  {
+                    "name": "HTML"
+                  },
+                  {
+                    "name": "Swift"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "Dart"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "Rust"
+                  },
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "HTML"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "CSS"
+                  },
+                  {
+                    "name": "Swift"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "SCSS"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "Shell"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "SCSS"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "HTML"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "HTML"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "CSS"
+                  },
+                  {
+                    "name": "HTML"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "CSS"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "HTML"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "HTML"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "HTML"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "SCSS"
+                  },
+                  {
+                    "name": "JavaScript"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "SCSS"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "HTML"
+                  },
+                  {
+                    "name": "CSS"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "HTML"
+                  },
+                  {
+                    "name": "CSS"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "JavaScript"
+                  },
+                  {
+                    "name": "HTML"
+                  },
+                  {
+                    "name": "SCSS"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "Swift"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "HTML"
+                  },
+                  {
+                    "name": "CSS"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            },
+            {
+              "languages": {
+                "nodes": [
+                  {
+                    "name": "TypeScript"
+                  },
+                  {
+                    "name": "HTML"
+                  },
+                  {
+                    "name": "CSS"
+                  }
+                ]
+              },
+              "stargazerCount": 0
+            }
+          ]
+        }
+      }
+    }
+  }
+}
