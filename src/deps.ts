@@ -1,10 +1,9 @@
 // Deno dependencies for trophy functionality
 // Note: soxa package doesn't exist at the specified URL, using native fetch wrapper
-export {
-  Bulk,
-  connect,
-  type Redis,
-} from "https://deno.land/x/redis@v0.29.0/mod.ts";
+export { connect, type Redis } from "https://deno.land/x/redis@v0.29.0/mod.ts";
+
+// Bulk type - Redis response type (string or null)
+export type Bulk = string | null;
 
 // Testing dependencies (only used in __tests__ files, won't be bundled for production)
 export {
