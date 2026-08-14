@@ -41,11 +41,10 @@ export type GitHubUserActivity = {
   };
 };
 
-export type GitHubUserAll =
-  & GitHubUserActivity
-  & GitHubUserIssue
-  & GitHubUserPullRequest
-  & GitHubUserRepository;
+export type GitHubUserAll = GitHubUserActivity &
+  GitHubUserIssue &
+  GitHubUserPullRequest &
+  GitHubUserRepository;
 export class UserInfo {
   public readonly totalCommits: number;
   public readonly totalFollowers: number;
@@ -62,8 +61,8 @@ export class UserInfo {
   public readonly joined2020: number;
   public readonly ogAccount: number;
 
-  static fromCombined(data: GitHubUserAll): UserInfo {
-    return new UserInfo(data, data, data, data);
+  static fromCombined(data: GitHubUserAll, allTimeCommits?: number): UserInfo {
+    return new UserInfo(data, data, data, data, allTimeCommits);
   }
 
   constructor(
@@ -71,10 +70,14 @@ export class UserInfo {
     userIssue: GitHubUserIssue,
     userPullRequest: GitHubUserPullRequest,
     userRepository: GitHubUserRepository,
+    allTimeCommits?: number,
   ) {
+    // Use all-time commit count if provided, otherwise fall back to
+    // current-year GraphQL contributions (public + private if opted-in)
     const totalCommits =
+      allTimeCommits ??
       userActivity.contributionsCollection.restrictedContributionsCount +
-      userActivity.contributionsCollection.totalCommitContributions;
+        userActivity.contributionsCollection.totalCommitContributions;
     const totalStargazers = userRepository.repositories.nodes.reduce(
       (prev: number, node: Repository) => {
         return prev + node.stargazerCount;
@@ -105,22 +108,19 @@ export class UserInfo {
       earliestRepoDate,
     );
 
-    const durationTime = new Date().getTime() -
-      new Date(earliestRepoDate).getTime();
+    const durationTime =
+      new Date().getTime() - new Date(earliestRepoDate).getTime();
     const durationYear = new Date(durationTime).getUTCFullYear() - 1970;
-    const durationDays = Math.floor(
-      durationTime / (1000 * 60 * 60 * 24) / 100,
-    );
-    const ancientAccount = new Date(earliestRepoDate).getFullYear() <= 2010
-      ? 1
-      : 0;
+    const durationDays = Math.floor(durationTime / (1000 * 60 * 60 * 24) / 100);
+    const ancientAccount =
+      new Date(earliestRepoDate).getFullYear() <= 2010 ? 1 : 0;
     const joined2020 = new Date(earliestRepoDate).getFullYear() == 2020 ? 1 : 0;
     const ogAccount = new Date(earliestRepoDate).getFullYear() <= 2008 ? 1 : 0;
 
     this.totalCommits = totalCommits;
     this.totalFollowers = userActivity.followers.totalCount;
-    this.totalIssues = userIssue.openIssues.totalCount +
-      userIssue.closedIssues.totalCount;
+    this.totalIssues =
+      userIssue.openIssues.totalCount + userIssue.closedIssues.totalCount;
     this.totalOrganizations = userActivity.organizations.totalCount;
     this.totalPullRequests = userPullRequest.pullRequests.totalCount;
     this.totalReviews =

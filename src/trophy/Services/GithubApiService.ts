@@ -66,14 +66,44 @@ export class GithubApiService extends GithubRepository {
   async requestUserInfo(username: string): Promise<UserInfo | ServiceError> {
     // Use single combined query instead of 4 separate queries to reduce Function Duration
     try {
-      const result = await this.requestUserAll(username);
-      if (result instanceof ServiceError) {
-        return result;
+      const [graphqlResult, allTimeCommits] = await Promise.all([
+        this.requestUserAll(username),
+        this.fetchAllTimeCommits(username),
+      ]);
+      if (graphqlResult instanceof ServiceError) {
+        return graphqlResult;
       }
-      return UserInfo.fromCombined(result);
+      return UserInfo.fromCombined(graphqlResult, allTimeCommits ?? undefined);
     } catch {
       Logger.error(`Error fetching user info for username: ${username}`);
       return new ServiceError("Not found", EServiceKindError.NOT_FOUND);
+    }
+  }
+
+  /**
+   * Fetch all-time commit count via GitHub REST search API.
+   * Mirrors the stats card's `include_all_commits=true` behaviour.
+   * Returns null on failure so the caller can fall back gracefully.
+   */
+  async fetchAllTimeCommits(username: string): Promise<number | null> {
+    try {
+      const token = TOKENS[0] ?? "";
+      const response = await fetch(
+        `https://api.github.com/search/commits?q=author:${encodeURIComponent(username)}`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/vnd.github.cloak-preview",
+            Authorization: `token ${token}`,
+          },
+        },
+      );
+      if (!response.ok) return null;
+      const data = await response.json();
+      const count = data?.total_count;
+      return typeof count === "number" && !isNaN(count) ? count : null;
+    } catch {
+      return null;
     }
   }
 
