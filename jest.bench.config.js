@@ -3,11 +3,20 @@ export default {
   transform: {},
   testEnvironment: "jsdom",
   coverageProvider: "v8",
-  testPathIgnorePatterns: ["<rootDir>/node_modules/", "<rootDir>/tests/e2e/"],
-  modulePathIgnorePatterns: ["<rootDir>/node_modules/", "<rootDir>/tests/e2e/"],
+  testPathIgnorePatterns: [
+    "<rootDir>/node_modules/",
+    "<rootDir>/tests/e2e/",
+    "<rootDir>/src/trophy/",
+  ],
+  modulePathIgnorePatterns: [
+    "<rootDir>/node_modules/",
+    "<rootDir>/tests/e2e/",
+    "<rootDir>/src/trophy/",
+  ],
   coveragePathIgnorePatterns: [
     "<rootDir>/node_modules/",
     "<rootDir>/tests/e2e/",
+    "<rootDir>/src/trophy/",
   ],
   testRegex: "(\\.bench)\\.(ts|tsx|js)$",
 };
