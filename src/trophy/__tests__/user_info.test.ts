@@ -1,4 +1,4 @@
-import { assertEquals } from "../../deps.ts";
+import { assertEquals } from "../deps.test.ts";
 import { UserInfo } from "../user_info.ts";
 
 Deno.test("UserInfo calculates total stargazers", () => {

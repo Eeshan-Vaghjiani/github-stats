@@ -2,7 +2,6 @@ import { Card } from "../src/trophy/card.ts";
 import { CONSTANTS, parseParams } from "../src/trophy/utils.ts";
 import { COLORS, Theme } from "../src/trophy/theme.ts";
 import { Error400 } from "../src/trophy/error_page.ts";
-import "@std/dotenv/load";
 import { staticRenderRegeneration } from "../src/trophy/StaticRenderRegeneration/index.ts";
 import { GithubRepositoryService } from "../src/trophy/Repository/GithubRepository.ts";
 import { GithubApiService } from "../src/trophy/Services/GithubApiService.ts";
