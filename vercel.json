@@ -1,4 +1,6 @@
 {
+  "buildCommand": null,
+  "installCommand": "npm install",
   "functions": {
     "api/*.js": {
       "memory": 128,
