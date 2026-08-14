@@ -1,4 +1,3 @@
-import { soxa } from "../../deps.ts";
 import {
   EServiceKindError,
   GithubError,
@@ -6,17 +5,25 @@ import {
   ServiceError,
 } from "../Types/index.ts";
 
+const GITHUB_GRAPHQL_URL = "https://api.github.com/graphql";
+
 export async function requestGithubData<T = unknown>(
   query: string,
   variables: { [key: string]: string },
   token = "",
 ) {
-  const response = await soxa.post("", {}, {
-    data: { query, variables },
+  const rawResponse = await fetch(GITHUB_GRAPHQL_URL, {
+    method: "POST",
     headers: {
+      "Content-Type": "application/json",
       Authorization: `bearer ${token}`,
     },
-  }) as QueryDefaultResponse<{ user: T }>;
+    body: JSON.stringify({ query, variables }),
+  });
+  const responseJson = await rawResponse.json();
+  const response = {
+    data: responseJson as QueryDefaultResponse<{ user: T }>["data"],
+  } as QueryDefaultResponse<{ user: T }>;
   const responseData = response.data;
 
   if (responseData?.errors?.length) {
@@ -26,9 +33,7 @@ export async function requestGithubData<T = unknown>(
     );
 
     throw new ServiceError(
-      responseData.errors
-        .map((error) => error.message)
-        .join("; "),
+      responseData.errors.map((error) => error.message).join("; "),
       getGraphQLErrorKind(responseData.errors),
     );
   }
@@ -43,9 +48,7 @@ export async function requestGithubData<T = unknown>(
 function getGraphQLErrorKind(errors: GithubError[]): EServiceKindError {
   const errorTypes = errors.map((error) => error.type);
 
-  if (
-    errorTypes.some((type) => type?.includes(EServiceKindError.RATE_LIMIT))
-  ) {
+  if (errorTypes.some((type) => type?.includes(EServiceKindError.RATE_LIMIT))) {
     return EServiceKindError.RATE_LIMIT;
   }
 
@@ -56,38 +59,30 @@ function getGraphQLErrorKind(errors: GithubError[]): EServiceKindError {
   return EServiceKindError.UPSTREAM;
 }
 
-function handleError(
-  responseData: {
-    data?: unknown;
-    errors?: GithubError[];
-    message?: string;
-    documentation_url?: string;
-  },
-): ServiceError {
+function handleError(responseData: {
+  data?: unknown;
+  errors?: GithubError[];
+  message?: string;
+  documentation_url?: string;
+}): ServiceError {
   let isRateLimitExceeded = false;
   const arrayErrors = responseData?.errors || [];
 
   if (Array.isArray(arrayErrors) && arrayErrors.length > 0) {
     isRateLimitExceeded = arrayErrors.some((error) =>
-      error.type.includes(EServiceKindError.RATE_LIMIT)
+      error.type.includes(EServiceKindError.RATE_LIMIT),
     );
   }
 
   if (responseData?.message) {
-    isRateLimitExceeded = responseData.message.toLowerCase().includes(
-      "rate limit",
-    );
+    isRateLimitExceeded = responseData.message
+      .toLowerCase()
+      .includes("rate limit");
   }
 
   if (isRateLimitExceeded) {
-    throw new ServiceError(
-      "Rate limit exceeded",
-      EServiceKindError.RATE_LIMIT,
-    );
+    throw new ServiceError("Rate limit exceeded", EServiceKindError.RATE_LIMIT);
   }
 
-  throw new ServiceError(
-    "unknown error",
-    EServiceKindError.NOT_FOUND,
-  );
+  throw new ServiceError("unknown error", EServiceKindError.NOT_FOUND);
 }

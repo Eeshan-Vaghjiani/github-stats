@@ -87,11 +87,7 @@ export class GithubApiService extends GithubRepository {
         CONSTANTS.DEFAULT_GITHUB_RETRY_DELAY,
       );
       return await retry.fetch<Promise<T>>(async ({ attempt }) => {
-        return await requestGithubData(
-          query,
-          variables,
-          TOKENS[attempt],
-        );
+        return await requestGithubData(query, variables, TOKENS[attempt] ?? "");
       });
     } catch (error) {
       if (error instanceof Error && error.cause instanceof ServiceError) {
