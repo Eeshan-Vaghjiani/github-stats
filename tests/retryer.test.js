@@ -71,6 +71,28 @@ describe("Test Retryer", () => {
     expect(res).toStrictEqual({ data: "ok" });
   });
 
+  it("retryer should try the user's own PAT_<LOGIN> first, then PAT_1", async () => {
+    const env = process.env;
+    process.env = { ...env, PAT_SOME_USER: "own", PAT_1: "shared" };
+    const fetcherRateLimitedOnce = jest.fn((_vars, _token, retries) =>
+      Promise.resolve(
+        // @ts-ignore
+        retries < 1
+          ? { data: { errors: [{ type: "RATE_LIMITED" }] } }
+          : { data: "ok" },
+      ),
+    );
+
+    const res = await retryer(fetcherRateLimitedOnce, { login: "some-user" });
+    process.env = env;
+
+    expect(fetcherRateLimitedOnce.mock.calls.map((c) => c[1])).toStrictEqual([
+      "own",
+      "shared",
+    ]);
+    expect(res).toStrictEqual({ data: "ok" });
+  });
+
   it("retryer should throw specific error if maximum retries reached", async () => {
     try {
       await retryer(fetcherFail, {});

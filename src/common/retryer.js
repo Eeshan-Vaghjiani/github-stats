@@ -12,6 +12,23 @@ const PATs = Object.keys(process.env).filter((key) =>
 const RETRIES = process.env.NODE_ENV === "test" ? 7 : PATs;
 
 /**
+ * Env var name of the token to use for this attempt. A user's own token
+ * (`PAT_<LOGIN>`, e.g. `PAT_QUANTANMREAPER`) goes first because only it can
+ * see that user's private repos/PRs; the shared `PAT_1..n` are the fallback.
+ *
+ * @param {string | undefined} login GitHub username being fetched.
+ * @param {number} retries Attempt index.
+ * @returns {string} Env var name.
+ */
+const tokenName = (login, retries) => {
+  const own = login && `PAT_${String(login).toUpperCase().replace(/-/g, "_")}`;
+  if (!own || !process.env[own]) {
+    return `PAT_${retries + 1}`;
+  }
+  return retries === 0 ? own : `PAT_${retries}`;
+};
+
+/**
  * @typedef {import("axios").AxiosResponse} AxiosResponse Axios response.
  * @typedef {(variables: any, token: string, retriesForTests?: number) => Promise<AxiosResponse>} FetcherFunction Fetcher function.
  */
@@ -36,12 +53,12 @@ const retryer = async (fetcher, variables, retries = 0) => {
     );
   }
 
+  const pat = tokenName(variables?.login, retries);
   try {
-    // try to fetch with the first token since RETRIES is 0 index i'm adding +1
     let response = await fetcher(
       variables,
       // @ts-ignore
-      process.env[`PAT_${retries + 1}`],
+      process.env[pat],
       // used in tests for faking rate limit
       retries,
     );
@@ -57,7 +74,7 @@ const retryer = async (fetcher, variables, retries = 0) => {
     // if rate limit is hit increase the RETRIES and recursively call the retryer
     // with username, and current RETRIES
     if (isRateLimited) {
-      logger.log(`PAT_${retries + 1} Failed`);
+      logger.log(`${pat} Failed`);
       retries++;
       // directly return from the function
       return retryer(fetcher, variables, retries);
@@ -82,7 +99,7 @@ const retryer = async (fetcher, variables, retries = 0) => {
       e?.response?.data?.message === "Sorry. Your account was suspended.";
 
     if (isBadCredential || isAccountSuspended) {
-      logger.log(`PAT_${retries + 1} Failed`);
+      logger.log(`${pat} Failed`);
       retries++;
       // directly return from the function
       return retryer(fetcher, variables, retries);
